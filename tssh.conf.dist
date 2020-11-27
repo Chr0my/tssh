@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# TESTING
+testing_cluster1="host1 host2"
+testing_cluster2="host3 host4"
+testing_all="${testing_cluster1} ${testing_cluster2}"
+### END TESTING
+
+# STAGING
+# Nothing !
+### END STAGING
+
+# PRODUCTION
+prod_cluster1="host3 host4"
+### END PRODUCTION
+
+declare -a all_clusters
+
+all_clusters=(
+    testing_cluster1
+    testing_cluster2
+    testing_all
+    prod_cluster1
+)
+
+# EOF
